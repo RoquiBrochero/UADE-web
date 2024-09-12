@@ -1,0 +1,35 @@
+/* Estilos para el Imperio */
+.imperio {
+    background-color: rgb(187, 33, 33);
+}
+
+/* Estilos para los Rebeldes */
+.rebeldes {
+    background-color: rgb(16, 16, 131);
+}
+
+/* Darth Vader */
+.darth-vader {
+    font-size: 1.2em;
+}
+
+/* Luke  */
+.luke-skywalker {
+    font-style: italic;
+}
+
+/* soldados */
+.soldado {
+    border: 3px double #e2e2e2;
+    letter-spacing: 5px;
+}
+
+/* Clase para las unidades de apoyo */
+.apoyo {
+    text-align: center;
+}
+
+/* Clase para las naves */
+.nave {
+    text-transform: uppercase;
+}
