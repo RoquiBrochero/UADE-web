@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Roquina Brochero</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.ico" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/72983f3f88.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="starter-page-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <h1 class="sitename">Roquina Brochero</h1>
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="curriculum.html" class="active">Curriculum</a></li>
+                    <li><a href="conocimientos.html">Conocimientos</a></li>
+                    <li><a data-bs-toggle="modal" data-bs-target="#login">Iniciar Sesion</a></li>
+                    <li>
+                        <form action="" method="get" class="nav-link" disabled>
+                            <div class="input-group">
+                                <input type="text" name="busqueda" id="busqueda"
+                                    class="form-control bg-light border-0 small" placeholder="Buscar"
+                                    aria-label="Search" aria-describedby="basic-addon2" value="...">
+                                <button type="submit" name="boton" id="registrar" value="Buscar"
+                                    class="btn btn-orange btn-xs btn-block align-items-center icon text-white"
+                                    disabled><i class="bi bi-search-heart"></i></button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+        </div>
+    </header>
+    <div class="modal fade" id="login" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Iniciar Sesion</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Vertical Form -->
+                    <form action="" method="POST" class="row g-3" disabled>
+                        <div class="col-12">
+                            <label for="inputNanme4" class="form-label">Usuario</label>
+                            <input type="text" id="username" name="username" class="form-control" autofocus required>
+                        </div>
+                        <div class="col-12">
+                            <label for="inputEmail4" class="form-label">Contraseña</label>
+                            <input type="password" id="pass" name="pass" class="form-control" requiered>
+                        </div>
+                        <!-- URL -->
+                        <input type="hidden" id='link' name="link" value="<?php echo $link?>">
+
+
+                        <div class="text-center">
+                            <button type="submit" id="ingresar" name="ingresar" value="Ingresar"
+                                class="btn btn-info rounded-pill" disabled><i class="bi bi-star me-1"></i> Iniciar
+                                Sesion</button>
+                        </div>
+
+                        <div class="text-center">
+                            <p><a href="#" class="message">¿Primera vez? <strong>Crear una
+                                        cuenta</strong></a></p>
+                        </div>
+                    </form><!-- Vertical Form -->
+
+                </div>
+            </div>
+        </div>
+    </div><!-- End Vertically centered Modal-->
+    <main class="main">
+        <!-- Page Title -->
+        <section id="hero2" class=" hero2 section2 dark-background">
+            <img src="assets/img/hero/4506961.jpg" alt="" class="hero2-bg">
+            <svg class="hero2-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28 " preserveAspectRatio="none">
+                <defs>
+                    <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+                    </path>
+                </defs>
+                <g class="wave1">
+                    <use xlink:href="#wave-path" x="50" y="3"></use>
+                </g>
+                <g class="wave2">
+                    <use xlink:href="#wave-path" x="50" y="0"></use>
+                </g>
+                <g class="wave3">
+                    <use xlink:href="#wave-path" x="50" y="9"></use>
+                </g>
+            </svg>
+        </section><!-- /hero2 Section -->
+        <section id="team" class="team section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Informacion <span>Curriculum</span></h2>
+                <div><span class="description-title">Mi Experiencia.</span></div>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-5">
+                    <!--Maximo 3!-->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member">
+                            <div class="pic">
+                                <img src="assets/img/xp/exp1.jpg" alt="" class="img-fluid d-block w-100">
+                            </div>
+                            <div class="z-3 member-info">
+                                <h4><a href="#">Analisis Funcional - Qservices</a></h4>
+                                <span>
+                                </span>
+                                <div class="social">
+                                    <a href="#"><i class="bi bi-bag"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member">
+                        <div class="pic">
+                            <img src="assets/img/xp/exp2.jpg" alt="" class="img-fluid d-block w-100">
+                        </div>
+                        <div class="z-3 member-info">
+                            <h4><a href="#">Analisis Funcional - SISEM</a></h4>
+                            <span>
+                            </span>
+                            <div class="social">
+                                <a href="#"><i class="bi bi-bag"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="member">
+                    <div class="pic">
+                        <img src="assets/img/xp/exp3.jpg" alt="" class="img-fluid d-block w-100">
+                    </div>
+                    <div class="z-3 member-info">
+                        <h4><a href="#">Desarrolladora Java</a></h4>
+                        <span>
+                        </span>
+                        <div class="social">
+                            <a href="#"><i class="bi bi-bag"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            </div>
+
+
+
+        </section><!-- /Team Section -->
+    </main>
+    <footer id="footer" class="footer dark-background">
+
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <span class="sitename">Roquina Brochero</span>
+                    </a>
+                    <div class="footer-contact pt-3">
+                        <p>Buenos Aires, Argentina</p>
+                        <p class="mt-3"><a href="https://wa.link/49dkyl"><strong>Whatsapp</strong></a></p>
+                    </div>
+                    <div class="social-links d-flex mt-4">
+                        <a href="https://wa.link/49dkyl"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">Roquina Brochero</strong></p>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+   
+        <h2>Curriculum</h2>
+        
+        <h3>Experiencia Laboral</h3>
+        <ul>
+            <li>Analista funcional en Qservices (abril 2024 - actualidad)</li>
+            <li>Analista funcional en Sisem (septiembre 2023 - abril 2024)</li>
+            <li>Desarrollador de software en Estudios Ackbar (febrero 2020 - septiembre 2023)</li>
+            <li>Desarrollador web autónomo (octubre 2019 - mayo 2020)</li>
+        </ul>
+
+        <h3>Educación</h3>
+        <ul>
+            <li>Licenciatura en gestión de la tecnología de la información, UADE (julio 2023 - actualidad)</li>
+            <li>Licenciatura en análisis de sistemas, Universidad CAECE (marzo 2022 - junio 2023)</li>
+        </ul>
+
+        <h3>Idiomas</h3>
+        <p>Inglés avanzado</p>
