@@ -219,3 +219,50 @@
   });
 
 })();
+
+// Manejar el envío del formulario
+function manejarEnvioFormulario(event) {
+  event.preventDefault(); // Evitar recargar la página
+
+  const nombre = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const telefono = document.getElementById("tel").value;
+  const mensaje = document.querySelector("textarea[name='mensaje']").value;
+
+  // Validar que todos los campos estén llenos
+  if (nombre && email && telefono && mensaje) {
+      alert(`¡Mensaje enviado con éxito!\n\n
+          Nombre: ${nombre}\n
+          Correo: ${email}\n
+          Teléfono: ${telefono}\n
+          Mensaje: ${mensaje}`);
+      
+      document.querySelector(".php-email-form").reset(); // Reiniciar el formulario
+  } else {
+      alert("Por favor, completa todos los campos antes de enviar.");
+  }
+}
+
+// Configurar eventos al cargar la página
+document.addEventListener("DOMContentLoaded", () => {
+  // Asociar el manejador al formulario
+  const formulario = document.querySelector(".php-email-form");
+  formulario.addEventListener("submit", manejarEnvioFormulario);
+  
+  // Habilitar/deshabilitar botón según si los campos están llenos
+  const submitButton = formulario.querySelector('button[type="submit"]');
+  const inputs = formulario.querySelectorAll('input, textarea');
+
+  function checkFields() {
+      let allFilled = true;
+      inputs.forEach(input => {
+          if (!input.value.trim()) {
+              allFilled = false;
+          }
+      });
+  }
+
+  inputs.forEach(input => {
+      input.addEventListener('input', checkFields);
+  });
+});
